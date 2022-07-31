@@ -43,21 +43,20 @@
       }
 
       #navMid div {
-        padding: 0 40px;
+        margin: 0 40px;
         font-size: 20px;
         position: relative;
+        cursor: pointer;
       }
 
       #navMid div:first-child::after {
         display: block;
         content: "";
-        width: 44%;
+        width: 100%;
         height: 1.5px;
         background: black;
         position: absolute;
         bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
       }
 
       #navEnd {
@@ -69,6 +68,13 @@
 
       #navEnd div {
         padding: 0 20px;
+        cursor: pointer;
+      }
+
+      .menu-icon {
+        display: none;
+        height: 32px;
+        cursor: pointer;
       }
 
       /* ------------ Navbar End ------------- */
@@ -105,6 +111,7 @@
         padding: 10px 30px;
         position: relative;
         border-radius: 30px;
+        cursor: pointer;
       }
 
       #midWholePart122 {
@@ -133,8 +140,9 @@
       #feeding,
       #light,
       #care {
-        height: 95%;
-        padding: 0 8px;
+        margin-right: 10px;
+        height: 60px;
+        width: 60px;
       }
 
       #midWholePart13 .text {
@@ -150,6 +158,113 @@
       }
 
       /* ------------ Main section End ------------- */
+
+      @media screen and (max-width: 1199px) {
+        body {
+          padding: 2%;
+        }
+        #navFirst img {
+          height: 40px;
+        }
+        #navMid div {
+          margin: 0 20px;
+        }
+        #midWholePart11 ul li {
+          width: 65%;
+        }
+        #midWholePart12 {
+          width: 25%;
+        }
+        #midWholePart13 {
+          padding-top: 70px;
+        }
+      }
+
+      @media only screen and (max-width: 991px) {
+        #navFirst img {
+          height: 30px;
+        }
+        #navMid div {
+          margin: 0 15px;
+          font-size: 16px;
+        }
+        #midWhole {
+          padding-top: 80px;
+        }
+        #midWholePart11 {
+          margin-left: 10px;
+        }
+        #monstera {
+          font-size: 66px;
+        }
+        #midWholePart12 {
+          width: 30%;
+        }
+        #midWholePart121 h1 {
+          font-size: 28px;
+        }
+        #midWholePart13 {
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+      @media only screen and (max-width: 767px) {
+        #navMid div {
+          display: none;
+        }
+        .menu-icon {
+          display: inline-block;
+        }
+        #navEnd {
+          margin-left: 220px;
+        }
+        #midWholePart11 ul li {
+          width: 100%;
+        }
+        #midWholePart12 {
+          width: 35%;
+        }
+        #midWholePart121 h1 {
+          font-size: 26px;
+        }
+        #imgMain {
+          height: 55vh;
+          width: 35vw;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        #navEnd {
+          display: none;
+        }
+        #monstera {
+          font-size: 44px;
+        }
+        #midWholePart11 ul li:nth-child(3),
+        #midWholePart11 ul li:nth-child(4) {
+          font-size: 16px;
+        }
+        #midWhole {
+          padding-top: 40px;
+        }
+        #midWholePart12 {
+          width: 50%;
+        }
+        #midWholePart121 h1 {
+          font-size: 20px;
+        }
+        #midWholePart122 img {
+          height: 20px;
+        }
+        #midWholePart13 {
+          width: 70%;
+        }
+        #imgMain {
+          height: 55vh;
+          width: 30vw;
+        }
+      }
     </style>
   </head>
   <body>
@@ -185,6 +300,8 @@
           <img src="./photos/search.svg" />
         </div>
       </div>
+
+      <img src="./photos/menu-icon.svg" alt="menu-icon" class="menu-icon" />
     </nav>
 
     <div id="midWhole">
@@ -218,7 +335,7 @@
         <div id="midWholePart13">
           <div class="midWholePart13Parts">
             <div>
-              <img id="feeding" src="./photos/water plant.png" />
+              <img id="feeding" src="./photos/water_plant.png" />
             </div>
             <div>
               <h4>Feeding</h4>
